@@ -1,0 +1,224 @@
+{
+  "correlation": [
+    {
+      "lead_months": 0,
+      "correlation": -0.0010708327032315132
+    },
+    {
+      "lead_months": 1,
+      "correlation": -0.1407814591748283
+    },
+    {
+      "lead_months": 2,
+      "correlation": 0.6600321197723318
+    },
+    {
+      "lead_months": 3,
+      "correlation": 0.033422448209565796
+    },
+    {
+      "lead_months": 4,
+      "correlation": -0.1568768083443323
+    },
+    {
+      "lead_months": 5,
+      "correlation": 0.4115222635709282
+    },
+    {
+      "lead_months": 6,
+      "correlation": 0.0991064700225023
+    }
+  ],
+  "ablation": {
+    "n_folds": 23,
+    "wape_no_threat": 0.42192430534823705,
+    "wape_with_threat": 0.34882167835870226,
+    "wape_seasonal_naive": 0.37848520957038007,
+    "threat_lift_pct": 17.32600517744509,
+    "threat_helps": true,
+    "beats_seasonal_naive": true
+  },
+  "per_fold": [
+    {
+      "cutoff": "2024-07",
+      "actual_add": 30363410.420000076,
+      "no_threat": 92731088.0,
+      "with_threat": 70105120.0,
+      "seasonal_naive": 36686249.69000006
+    },
+    {
+      "cutoff": "2024-08",
+      "actual_add": 108035808.02000046,
+      "no_threat": 86582464.0,
+      "with_threat": 117436344.0,
+      "seasonal_naive": 101516624.47999954
+    },
+    {
+      "cutoff": "2024-09",
+      "actual_add": 141600781.93999958,
+      "no_threat": 118349136.0,
+      "with_threat": 137905840.0,
+      "seasonal_naive": 141797126.06000042
+    },
+    {
+      "cutoff": "2024-10",
+      "actual_add": 68581980.23999977,
+      "no_threat": 104966184.0,
+      "with_threat": 80213840.0,
+      "seasonal_naive": 63703638.27000046
+    },
+    {
+      "cutoff": "2024-11",
+      "actual_add": 78630445.64000034,
+      "no_threat": 59762404.0,
+      "with_threat": 91666536.0,
+      "seasonal_naive": 86959956.30999947
+    },
+    {
+      "cutoff": "2024-12",
+      "actual_add": 152787574.58000088,
+      "no_threat": 107781200.0,
+      "with_threat": 105809456.0,
+      "seasonal_naive": 109336405.61999989
+    },
+    {
+      "cutoff": "2025-01",
+      "actual_add": 81758544.52999973,
+      "no_threat": 95318456.0,
+      "with_threat": 127959416.0,
+      "seasonal_naive": 47360254.84000015
+    },
+    {
+      "cutoff": "2025-02",
+      "actual_add": 94454175.60999966,
+      "no_threat": 104407040.0,
+      "with_threat": 114654544.0,
+      "seasonal_naive": 120223853.65000057
+    },
+    {
+      "cutoff": "2025-03",
+      "actual_add": 113787279.87000084,
+      "no_threat": 216142352.0,
+      "with_threat": 218833984.0,
+      "seasonal_naive": 292415891.0799999
+    },
+    {
+      "cutoff": "2025-04",
+      "actual_add": 80012256.29999924,
+      "no_threat": 98502984.0,
+      "with_threat": 81574904.0,
+      "seasonal_naive": 116992438.26000023
+    },
+    {
+      "cutoff": "2025-05",
+      "actual_add": 120138156.56000042,
+      "no_threat": 101731768.0,
+      "with_threat": 91319880.0,
+      "seasonal_naive": 58169239.09000015
+    },
+    {
+      "cutoff": "2025-06",
+      "actual_add": 309849587.0300007,
+      "no_threat": 126275728.0,
+      "with_threat": 196700944.0,
+      "seasonal_naive": 94838322.43999958
+    },
+    {
+      "cutoff": "2025-07",
+      "actual_add": 42982608.43999958,
+      "no_threat": 124763624.0,
+      "with_threat": 75539064.0,
+      "seasonal_naive": 30363410.420000076
+    },
+    {
+      "cutoff": "2025-08",
+      "actual_add": 96074896.36999989,
+      "no_threat": 97303424.0,
+      "with_threat": 132039176.0,
+      "seasonal_naive": 108035808.02000046
+    },
+    {
+      "cutoff": "2025-09",
+      "actual_add": 210942494.60999966,
+      "no_threat": 113562248.0,
+      "with_threat": 121679832.0,
+      "seasonal_naive": 141600781.93999958
+    },
+    {
+      "cutoff": "2025-10",
+      "actual_add": 129314852.3199997,
+      "no_threat": 106301704.0,
+      "with_threat": 90153216.0,
+      "seasonal_naive": 68581980.23999977
+    },
+    {
+      "cutoff": "2025-11",
+      "actual_add": 72030670.13999939,
+      "no_threat": 155911776.0,
+      "with_threat": 128080624.0,
+      "seasonal_naive": 78630445.64000034
+    },
+    {
+      "cutoff": "2025-12",
+      "actual_add": 148654477.37000084,
+      "no_threat": 140988752.0,
+      "with_threat": 106021840.0,
+      "seasonal_naive": 152787574.58000088
+    },
+    {
+      "cutoff": "2026-01",
+      "actual_add": 70330890.67999935,
+      "no_threat": 135987776.0,
+      "with_threat": 112805520.0,
+      "seasonal_naive": 81758544.52999973
+    },
+    {
+      "cutoff": "2026-02",
+      "actual_add": 35682273.24999905,
+      "no_threat": 105406432.0,
+      "with_threat": 100923376.0,
+      "seasonal_naive": 94454175.60999966
+    },
+    {
+      "cutoff": "2026-03",
+      "actual_add": 143986836.51000023,
+      "no_threat": 131779160.0,
+      "with_threat": 101633984.0,
+      "seasonal_naive": 113787279.87000084
+    },
+    {
+      "cutoff": "2026-04",
+      "actual_add": 181600638.72000122,
+      "no_threat": 119872264.0,
+      "with_threat": 152631792.0,
+      "seasonal_naive": 80012256.29999924
+    },
+    {
+      "cutoff": "2026-05",
+      "actual_add": 130185891.27999973,
+      "no_threat": 73488920.0,
+      "with_threat": 122799304.0,
+      "seasonal_naive": 120138156.56000042
+    }
+  ],
+  "feature_importance": {
+    "ai_threat_index_lag2": 0.45820000767707825,
+    "cve_count_lag2": 0.15649999678134918,
+    "month_cos": 0.1031000018119812,
+    "lag_2": 0.06350000202655792,
+    "lag_12": 0.036400001496076584,
+    "lag_6": 0.03550000116229057,
+    "roll3": 0.028200000524520874,
+    "lag_1": 0.023499999195337296,
+    "roll12": 0.02070000022649765,
+    "month_sin": 0.019500000402331352,
+    "disclosed_breach_count_lag3": 0.018200000748038292,
+    "lag_3": 0.011099999770522118,
+    "trend": 0.01080000028014183,
+    "ai_threat_index_lag3": 0.007499999832361937,
+    "disclosed_breach_count_lag2": 0.005499999970197678,
+    "cve_count_lag3": 0.0017000000225380063,
+    "is_fq4": 0.0
+  },
+  "summary": "Over 23 one-step folds, adding lagged threat features improves the XGBoost net-add forecast: WAPE 0.422 (no threat) -> 0.349 (with threat), a lift of 17.3%. Reference seasonal-naive WAPE = 0.378."
+}

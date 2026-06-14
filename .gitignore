@@ -1,0 +1,29 @@
+# Secrets — NEVER commit
+.streamlit/secrets.toml
+*.key
+*.pem
+.env
+.env.*
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Python caches
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Streamlit runtime cache
+.streamlit/cache/
+
+# NOTE: data/raw/*.csv and data/warehouse.duckdb ARE committed on purpose
+# (so the deployed app runs with no build step).

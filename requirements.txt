@@ -1,0 +1,23 @@
+# Pathfinder — pinned deps. Tested on Python 3.12 (Streamlit Community Cloud: select 3.12).
+# Core data / warehouse
+duckdb==1.1.3
+pandas==2.2.3
+numpy==2.1.3
+pyarrow==18.1.0
+# Validation / governance
+pandera==0.20.4
+# Modeling
+scikit-learn==1.5.2
+statsmodels==0.14.4
+scipy==1.14.1
+xgboost==2.1.3
+# App / viz
+streamlit==1.40.2
+plotly==5.24.1
+# Tests
+pytest==8.3.4
+# NOTE: classical time-series uses statsmodels (SARIMAX/ETS) + a custom auto-ARIMA grid search.
+#       pmdarima/prophet intentionally omitted — fragile to build on py3.12/numpy2 and heavy for
+#       Streamlit Cloud. See docs/model_card.md.
+# NOTE: live LLM narrative generation needs `anthropic` (see requirements-llm.txt). The deployed
+#       app uses pre-generated cached narratives and requires NO API key and NO extra deps.

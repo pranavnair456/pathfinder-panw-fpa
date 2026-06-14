@@ -103,12 +103,17 @@ def build_dim_platform() -> pd.DataFrame:
 # ---------------------------------------------------------------------------
 # Calibrated monthly ARR curves
 # ---------------------------------------------------------------------------
-def _quarterly_to_monthly(qvals: dict, spine: pd.DatetimeIndex) -> pd.Series:
+def _quarterly_to_monthly(qvals: dict, spine: pd.DatetimeIndex,
+                          rng: np.random.Generator | None = None, noise_k: float = 14.0
+                          ) -> pd.Series:
     """Convert {(fy,fq): value} quarter-END levels to a monthly END-of-month level series.
 
     Within a quarter the increment is back-loaded ([0.2, 0.3, 0.5]) to mimic enterprise deals
-    closing late in the quarter. The PRE-history starting point is extrapolated from the first
-    quarter's implied growth so month 1 isn't a cliff.
+    closing late in the quarter. When `rng` is supplied, the within-quarter split is drawn from a
+    Dirichlet centred on that shape so the monthly PATH is realistically lumpy (real bookings
+    aren't smooth) while quarter-END anchors stay EXACT. This lumpiness is what lets trend/seasonal
+    models earn their keep over a naive baseline. The PRE-history start is extrapolated so month 1
+    isn't a cliff.
     """
     weights = [0.2, 0.3, 0.5]
     # ordered list of quarter levels aligned to the spine
@@ -132,23 +137,28 @@ def _quarterly_to_monthly(qvals: dict, spine: pd.DatetimeIndex) -> pd.Series:
             prev_level = level * g  # slightly below first level
         inc = level - prev_level
         qm = by_q[q]
+        if rng is not None and len(qm) == 3:
+            w = rng.dirichlet(np.array(weights) * noise_k)
+        else:
+            w = np.array(weights[:len(qm)])
+            w = w / w.sum()
         cum = 0.0
         for j, m in enumerate(qm):
-            w = weights[j] if j < len(weights) else weights[-1]
-            cum += w
+            cum += w[j] if j < len(w) else w[-1]
             out[m] = prev_level + inc * cum
         prev_level = level
     return out.ffill()
 
 
-def organic_monthly_by_platform(spine: pd.DatetimeIndex) -> dict[str, pd.Series]:
+def organic_monthly_by_platform(spine: pd.DatetimeIndex,
+                                rng: np.random.Generator | None = None) -> dict[str, pd.Series]:
     """Monthly END-of-month ORGANIC NGS ARR ($) per organic platform, summing to the total curve."""
     # total organic quarterly -> {(fy,fq): $}
     qtotal = {}
     for fy, qs in C.NGS_ARR_ORGANIC_B.items():
         for qi, v in enumerate(qs, start=1):
             qtotal[(fy, qi)] = v * 1e9
-    total_m = _quarterly_to_monthly(qtotal, spine)
+    total_m = _quarterly_to_monthly(qtotal, spine, rng=rng, noise_k=20.0)
     out = {p: pd.Series(0.0, index=spine) for p in ORGANIC_PLATFORMS}
     for m in spine:
         fy = fiscal_year(m)
@@ -222,7 +232,7 @@ class CustomerPool:
 
 def simulate(spine_hist: pd.DatetimeIndex, rng: np.random.Generator):
     """Return (events_df, dim_customer_df, platform_arr_history_df)."""
-    organic = organic_monthly_by_platform(spine_hist)
+    organic = organic_monthly_by_platform(spine_hist, rng=rng)
     inorganic = inorganic_monthly_by_platform(spine_hist)
     pool = CustomerPool(rng)
 
@@ -556,20 +566,32 @@ def build_fact_ma_deals() -> pd.DataFrame:
 # Threat signals (Option D) — built with a real-but-noisy LEAD over bookings
 # ---------------------------------------------------------------------------
 def build_fact_threat_signals(fin_df, events_df, rng) -> pd.DataFrame:
+    """External threat indicators with a REAL-but-noisy ~2-month LEAD over organic demand shocks.
+
+    The AI-threat index is constructed so that index[t] partially predicts the *unexpected* part of
+    organic net-adds at t+2 (the SHOCK left after removing the smooth trend/seasonality a history
+    model already knows). That is the only thing a leading indicator can usefully add — and it's
+    deliberately noisy, so Option D's ablation gives an honest, moderate lift rather than a
+    too-good-to-be-true result. CVE volume and breach counts trend up with mild lead content.
+    """
     months = fin_df["month"].tolist()
-    # net-new organic bookings per month (drives the "true" demand signal)
-    bookings = (events_df[events_df["event_type"].isin(["new", "expansion"])]
-                .groupby("month")["arr_delta"].sum().reindex(months).fillna(0.0))
-    z = (bookings - bookings.mean()) / (bookings.std() + 1e-9)
     n = len(months)
+    # Organic net-adds = the demand the index is meant to lead.
+    netadds = (events_df[events_df["platform"].isin(ORGANIC_PLATFORMS)]
+               .groupby("month")["arr_delta"].sum().reindex(months).fillna(0.0))
+    # SHOCK = net-adds minus a smooth (centered rolling) expectation -> the unpredictable part.
+    expected = netadds.rolling(3, center=True, min_periods=1).mean()
+    shock = netadds - expected
+    zshock = ((shock - shock.mean()) / (shock.std() + 1e-9)).to_numpy()
+
+    BETA, NOISE = 14.0, 14.0   # signal vs noise -> ~0.7 corr with the future shock (moderate lift)
     rows = []
     for i, mk in enumerate(months):
-        # AI-threat index LEADS bookings by ~2 months: index[i] correlates with bookings[i+2]
-        lead = z.iloc[min(i + 2, n - 1)]
-        trend = i / n  # secular rise in threat activity
-        ai_index = 100 + 35 * trend + 18 * lead + rng.normal(0, 9)
-        cve = int(2200 + 1400 * trend + 220 * lead + rng.normal(0, 180))
-        breaches = int(95 + 70 * trend + 12 * max(lead, 0) + rng.normal(0, 14))
+        lead = zshock[min(i + 2, n - 1)]         # index[i] ~ shock at i+2
+        trend = i / n
+        ai_index = 100 + 35 * trend + BETA * lead + rng.normal(0, NOISE)
+        cve = int(2200 + 1400 * trend + 160 * lead + rng.normal(0, 220))
+        breaches = int(95 + 70 * trend + 9 * max(lead, 0) + rng.normal(0, 16))
         rows.append({"month": mk, "cve_count": max(cve, 0),
                     "disclosed_breach_count": max(breaches, 0),
                     "ai_threat_index": round(ai_index, 2)})

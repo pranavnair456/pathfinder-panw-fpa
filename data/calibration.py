@@ -94,10 +94,12 @@ PLATFORMIZED_COUNT = {
 # Customer dimension distributions
 # ---------------------------------------------------------------------------
 SEGMENTS = {  # name: (share_of_logos, mean_initial_acv_usd, relative_expansion)
-    "SMB":              (0.45, 35_000,   0.8),
-    "Commercial":       (0.33, 120_000,  1.0),
-    "Enterprise":       (0.18, 600_000,  1.3),
-    "Strategic-Global": (0.04, 3_000_000, 1.6),
+    # ACVs sized so the NGS customer base lands in the tens-of-thousands with a realistic ARPU
+    # (~$0.3-0.5M; enterprise-skewed but not pure-strategic). See docs/methodology.md.
+    "SMB":              (0.55, 10_000,   0.8),
+    "Commercial":       (0.30, 40_000,   1.0),
+    "Enterprise":       (0.12, 180_000,  1.3),
+    "Strategic-Global": (0.03, 1_000_000, 1.6),
 }
 REGIONS = {"Americas": 0.55, "EMEA": 0.27, "APAC": 0.13, "JAPAC": 0.05}
 INDUSTRIES = {

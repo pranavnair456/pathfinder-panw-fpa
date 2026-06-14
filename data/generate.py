@@ -295,9 +295,12 @@ def simulate(spine_hist: pd.DatetimeIndex, rng: np.random.Generator):
                 exp_rate = 0.018 * seasonal
                 expansion_amt = base * exp_rate
                 k = min(len(active), max(1, len(active) // 8))
+                # Concentrate expansion on platformized accounts (they land-and-expand); single-
+                # product accounts rarely expand. This is what drives the NRR gap that Option B
+                # monetizes. Weight ~3:1 selection toward platformized (yields ~128% vs ~104%).
                 wts = np.array([
-                    (C.NRR_PLATFORMIZED if pool.customers[c]["platformized_flag"]
-                     else C.NRR_NONPLATFORM) for (c, p) in active])
+                    (3.0 if pool.customers[c]["platformized_flag"] else 1.0)
+                    for (c, p) in active])
                 wts = wts / wts.sum()
                 idx = rng.choice(len(active), size=k, replace=False, p=wts)
                 picks = [active[i] for i in idx]
@@ -313,7 +316,7 @@ def simulate(spine_hist: pd.DatetimeIndex, rng: np.random.Generator):
                 seg_mean = {k: v[1] for k, v in C.SEGMENTS.items()}
                 avg_acv = sum(C.SEGMENTS[s][0] * C.SEGMENTS[s][1] for s in C.SEGMENTS)
                 n_deals = max(1, int(new_amt / (avg_acv * 1.2)))
-                n_deals = min(n_deals, 400)
+                n_deals = min(n_deals, 1500)
                 for amt in _distribute(new_amt, n_deals, rng):
                     if rng.random() < 0.5 or not cust_platforms:  # new logo
                         cid = pool.new_customer(m)

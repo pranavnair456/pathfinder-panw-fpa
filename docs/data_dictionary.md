@@ -37,7 +37,7 @@ _Generated from the live DuckDB warehouse by `src/governance.generate_data_dicti
 | is_organic | BOOLEAN |
 
 
-## `dim_customer`  (8,236 rows)
+## `dim_customer`  (33,691 rows)
 
 | column | type |
 |---|---|
@@ -53,7 +53,7 @@ _Generated from the live DuckDB warehouse by `src/governance.generate_data_dicti
 | organic_inorganic | VARCHAR |
 
 
-## `fact_subscription_events`  (70,167 rows)
+## `fact_subscription_events`  (276,669 rows)
 
 | column | type |
 |---|---|
@@ -131,7 +131,7 @@ _Generated from the live DuckDB warehouse by `src/governance.generate_data_dicti
 | ai_threat_index | DOUBLE |
 
 
-## `customer_arr_monthly`  (286,846 rows)
+## `customer_arr_monthly`  (1,179,303 rows)
 
 | column | type |
 |---|---|

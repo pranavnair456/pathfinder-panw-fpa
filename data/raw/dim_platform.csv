@@ -1,0 +1,18 @@
+platform_id,platform,segment_group,module,source,is_organic
+1,Strata,Network Security,NGFW Software,organic,True
+2,Strata,Network Security,SASE / Prisma Access,organic,True
+3,Strata,Network Security,Cloud-Delivered Security Services,organic,True
+4,Prisma Cloud,Cloud Security,CSPM,organic,True
+5,Prisma Cloud,Cloud Security,CWP (Workload),organic,True
+6,Prisma Cloud,Cloud Security,Code Security,organic,True
+7,Prisma Cloud,Cloud Security,AI Security (Prisma AIRS),organic,True
+8,Cortex,Security Operations,XSIAM,organic,True
+9,Cortex,Security Operations,XDR,organic,True
+10,Cortex,Security Operations,XSOAR,organic,True
+11,Cortex,Security Operations,AgentiX,organic,True
+12,Identity,Identity Security (CyberArk),Privileged Access (PAM),CyberArk,False
+13,Identity,Identity Security (CyberArk),Secrets Management,CyberArk,False
+14,Identity,Identity Security (CyberArk),Identity Security Platform,CyberArk,False
+15,Observability,Observability (Chronosphere),Metrics,Chronosphere,False
+16,Observability,Observability (Chronosphere),Logs,Chronosphere,False
+17,Observability,Observability (Chronosphere),Tracing,Chronosphere,False

@@ -1,0 +1,361 @@
+month,platform,ending_arr,is_organic
+2020-08,Strata,227857142.86,True
+2020-08,Prisma Cloud,100257142.86,True
+2020-08,Cortex,127600000.0,True
+2020-08,Identity,0.0,False
+2020-08,Observability,0.0,False
+2020-09,Strata,245535714.29,True
+2020-09,Prisma Cloud,108035714.29,True
+2020-09,Cortex,137500000.0,True
+2020-09,Identity,0.0,False
+2020-09,Observability,0.0,False
+2020-10,Strata,275000000.0,True
+2020-10,Prisma Cloud,121000000.0,True
+2020-10,Cortex,154000000.0,True
+2020-10,Identity,0.0,False
+2020-10,Observability,0.0,False
+2020-11,Strata,290000000.0,True
+2020-11,Prisma Cloud,127600000.0,True
+2020-11,Cortex,162400000.0,True
+2020-11,Identity,0.0,False
+2020-11,Observability,0.0,False
+2020-12,Strata,312500000.0,True
+2020-12,Prisma Cloud,137500000.0,True
+2020-12,Cortex,175000000.0,True
+2020-12,Identity,0.0,False
+2020-12,Observability,0.0,False
+2021-01,Strata,350000000.0,True
+2021-01,Prisma Cloud,154000000.0,True
+2021-01,Cortex,196000000.0,True
+2021-01,Identity,0.0,False
+2021-01,Observability,0.0,False
+2021-02,Strata,370000000.0,True
+2021-02,Prisma Cloud,162800000.0,True
+2021-02,Cortex,207200000.0,True
+2021-02,Identity,0.0,False
+2021-02,Observability,0.0,False
+2021-03,Strata,400000000.0,True
+2021-03,Prisma Cloud,176000000.0,True
+2021-03,Cortex,224000000.0,True
+2021-03,Identity,0.0,False
+2021-03,Observability,0.0,False
+2021-04,Strata,450000000.0,True
+2021-04,Prisma Cloud,198000000.0,True
+2021-04,Cortex,252000000.0,True
+2021-04,Identity,0.0,False
+2021-04,Observability,0.0,False
+2021-05,Strata,478000000.0,True
+2021-05,Prisma Cloud,210320000.0,True
+2021-05,Cortex,267680000.0,True
+2021-05,Identity,0.0,False
+2021-05,Observability,0.0,False
+2021-06,Strata,520000000.0,True
+2021-06,Prisma Cloud,228800000.0,True
+2021-06,Cortex,291200000.0,True
+2021-06,Identity,0.0,False
+2021-06,Observability,0.0,False
+2021-07,Strata,590000000.0,True
+2021-07,Prisma Cloud,259600000.0,True
+2021-07,Cortex,330400000.0,True
+2021-07,Identity,0.0,False
+2021-07,Observability,0.0,False
+2021-08,Strata,577920000.0,True
+2021-08,Prisma Cloud,276920000.0,True
+2021-08,Cortex,349160000.0,True
+2021-08,Identity,0.0,False
+2021-08,Observability,0.0,False
+2021-09,Strata,595200000.0,True
+2021-09,Prisma Cloud,285200000.0,True
+2021-09,Cortex,359600000.0,True
+2021-09,Identity,0.0,False
+2021-09,Observability,0.0,False
+2021-10,Strata,624000000.0,True
+2021-10,Prisma Cloud,299000000.0,True
+2021-10,Cortex,377000000.0,True
+2021-10,Identity,0.0,False
+2021-10,Observability,0.0,False
+2021-11,Strata,638400000.0,True
+2021-11,Prisma Cloud,305900000.0,True
+2021-11,Cortex,385700000.0,True
+2021-11,Identity,0.0,False
+2021-11,Observability,0.0,False
+2021-12,Strata,660000000.0,True
+2021-12,Prisma Cloud,316250000.0,True
+2021-12,Cortex,398750000.0,True
+2021-12,Identity,0.0,False
+2021-12,Observability,0.0,False
+2022-01,Strata,696000000.0,True
+2022-01,Prisma Cloud,333500000.0,True
+2022-01,Cortex,420500000.0,True
+2022-01,Identity,0.0,False
+2022-01,Observability,0.0,False
+2022-02,Strata,715200000.0,True
+2022-02,Prisma Cloud,342700000.0,True
+2022-02,Cortex,432100000.0,True
+2022-02,Identity,0.0,False
+2022-02,Observability,0.0,False
+2022-03,Strata,744000000.0,True
+2022-03,Prisma Cloud,356500000.0,True
+2022-03,Cortex,449500000.0,True
+2022-03,Identity,0.0,False
+2022-03,Observability,0.0,False
+2022-04,Strata,792000000.0,True
+2022-04,Prisma Cloud,379500000.0,True
+2022-04,Cortex,478500000.0,True
+2022-04,Identity,0.0,False
+2022-04,Observability,0.0,False
+2022-05,Strata,816000000.0,True
+2022-05,Prisma Cloud,391000000.0,True
+2022-05,Cortex,493000000.0,True
+2022-05,Identity,0.0,False
+2022-05,Observability,0.0,False
+2022-06,Strata,852000000.0,True
+2022-06,Prisma Cloud,408250000.0,True
+2022-06,Cortex,514750000.0,True
+2022-06,Identity,0.0,False
+2022-06,Observability,0.0,False
+2022-07,Strata,912000000.0,True
+2022-07,Prisma Cloud,437000000.0,True
+2022-07,Cortex,551000000.0,True
+2022-07,Identity,0.0,False
+2022-07,Observability,0.0,False
+2022-08,Strata,897000000.0,True
+2022-08,Prisma Cloud,468000000.0,True
+2022-08,Cortex,585000000.0,True
+2022-08,Identity,0.0,False
+2022-08,Observability,0.0,False
+2022-09,Strata,931500000.0,True
+2022-09,Prisma Cloud,486000000.0,True
+2022-09,Cortex,607500000.0,True
+2022-09,Identity,0.0,False
+2022-09,Observability,0.0,False
+2022-10,Strata,989000000.0,True
+2022-10,Prisma Cloud,516000000.0,True
+2022-10,Cortex,645000000.0,True
+2022-10,Identity,0.0,False
+2022-10,Observability,0.0,False
+2022-11,Strata,1012000000.0,True
+2022-11,Prisma Cloud,528000000.0,True
+2022-11,Cortex,660000000.0,True
+2022-11,Identity,0.0,False
+2022-11,Observability,0.0,False
+2022-12,Strata,1046500000.0,True
+2022-12,Prisma Cloud,546000000.0,True
+2022-12,Cortex,682500000.0,True
+2022-12,Identity,0.0,False
+2022-12,Observability,0.0,False
+2023-01,Strata,1104000000.0,True
+2023-01,Prisma Cloud,576000000.0,True
+2023-01,Cortex,720000000.0,True
+2023-01,Identity,0.0,False
+2023-01,Observability,0.0,False
+2023-02,Strata,1127000000.0,True
+2023-02,Prisma Cloud,588000000.0,True
+2023-02,Cortex,735000000.0,True
+2023-02,Identity,0.0,False
+2023-02,Observability,0.0,False
+2023-03,Strata,1161500000.0,True
+2023-03,Prisma Cloud,606000000.0,True
+2023-03,Cortex,757500000.0,True
+2023-03,Identity,0.0,False
+2023-03,Observability,0.0,False
+2023-04,Strata,1219000000.0,True
+2023-04,Prisma Cloud,636000000.0,True
+2023-04,Cortex,795000000.0,True
+2023-04,Identity,0.0,False
+2023-04,Observability,0.0,False
+2023-05,Strata,1246600000.0,True
+2023-05,Prisma Cloud,650400000.0,True
+2023-05,Cortex,813000000.0,True
+2023-05,Identity,0.0,False
+2023-05,Observability,0.0,False
+2023-06,Strata,1288000000.0,True
+2023-06,Prisma Cloud,672000000.0,True
+2023-06,Cortex,840000000.0,True
+2023-06,Identity,0.0,False
+2023-06,Observability,0.0,False
+2023-07,Strata,1357000000.0,True
+2023-07,Prisma Cloud,708000000.0,True
+2023-07,Cortex,885000000.0,True
+2023-07,Identity,0.0,False
+2023-07,Observability,0.0,False
+2023-08,Strata,1322640000.0,True
+2023-08,Prisma Cloud,751500000.0,True
+2023-08,Cortex,931860000.0,True
+2023-08,Identity,0.0,False
+2023-08,Observability,0.0,False
+2023-09,Strata,1359600000.0,True
+2023-09,Prisma Cloud,772500000.0,True
+2023-09,Cortex,957900000.0,True
+2023-09,Identity,0.0,False
+2023-09,Observability,0.0,False
+2023-10,Strata,1421200000.0,True
+2023-10,Prisma Cloud,807500000.0,True
+2023-10,Cortex,1001300000.0,True
+2023-10,Identity,0.0,False
+2023-10,Observability,0.0,False
+2023-11,Strata,1444080000.0,True
+2023-11,Prisma Cloud,820500000.0,True
+2023-11,Cortex,1017420000.0,True
+2023-11,Identity,0.0,False
+2023-11,Observability,0.0,False
+2023-12,Strata,1478400000.0,True
+2023-12,Prisma Cloud,840000000.0,True
+2023-12,Cortex,1041600000.0,True
+2023-12,Identity,0.0,False
+2023-12,Observability,0.0,False
+2024-01,Strata,1535600000.0,True
+2024-01,Prisma Cloud,872500000.0,True
+2024-01,Cortex,1081900000.0,True
+2024-01,Identity,0.0,False
+2024-01,Observability,0.0,False
+2024-02,Strata,1576080000.0,True
+2024-02,Prisma Cloud,895500000.0,True
+2024-02,Cortex,1110420000.0,True
+2024-02,Identity,0.0,False
+2024-02,Observability,0.0,False
+2024-03,Strata,1636800000.0,True
+2024-03,Prisma Cloud,930000000.0,True
+2024-03,Cortex,1153200000.0,True
+2024-03,Identity,0.0,False
+2024-03,Observability,0.0,False
+2024-04,Strata,1738000000.0,True
+2024-04,Prisma Cloud,987500000.0,True
+2024-04,Cortex,1224500000.0,True
+2024-04,Identity,0.0,False
+2024-04,Observability,0.0,False
+2024-05,Strata,1828766053.67,True
+2024-05,Prisma Cloud,1019940601.13,True
+2024-05,Cortex,1268079249.65,True
+2024-05,Identity,0.0,False
+2024-05,Observability,0.0,False
+2024-06,Strata,1797400000.0,True
+2024-06,Prisma Cloud,1021250000.0,True
+2024-06,Cortex,1266350000.0,True
+2024-06,Identity,0.0,False
+2024-06,Observability,0.0,False
+2024-07,Strata,1856800000.0,True
+2024-07,Prisma Cloud,1055000000.0,True
+2024-07,Cortex,1308200000.0,True
+2024-07,Identity,0.0,False
+2024-07,Observability,0.0,False
+2024-08,Strata,1800448265.1,True
+2024-08,Prisma Cloud,1113884035.39,True
+2024-08,Cortex,1370501143.88,True
+2024-08,Identity,0.0,False
+2024-08,Observability,0.0,False
+2024-09,Strata,1831200000.0,True
+2024-09,Prisma Cloud,1133600000.0,True
+2024-09,Cortex,1395200000.0,True
+2024-09,Identity,0.0,False
+2024-09,Observability,0.0,False
+2024-10,Strata,1890000000.0,True
+2024-10,Prisma Cloud,1170000000.0,True
+2024-10,Cortex,1440000000.0,True
+2024-10,Identity,0.0,False
+2024-10,Observability,0.0,False
+2024-11,Strata,1919067836.67,True
+2024-11,Prisma Cloud,1187345611.63,True
+2024-11,Cortex,1461639722.56,True
+2024-11,Identity,0.0,False
+2024-11,Observability,0.0,False
+2024-12,Strata,1953000000.0,True
+2024-12,Prisma Cloud,1209000000.0,True
+2024-12,Cortex,1488000000.0,True
+2024-12,Identity,0.0,False
+2024-12,Observability,0.0,False
+2025-01,Strata,2016000000.0,True
+2025-01,Prisma Cloud,1248000000.0,True
+2025-01,Cortex,1536000000.0,True
+2025-01,Identity,0.0,False
+2025-01,Observability,0.0,False
+2025-02,Strata,2044175793.72,True
+2025-02,Prisma Cloud,1265495828.12,True
+2025-02,Cortex,1556861688.52,True
+2025-02,Identity,0.0,False
+2025-02,Observability,0.0,False
+2025-03,Strata,2076900000.0,True
+2025-03,Prisma Cloud,1285700000.0,True
+2025-03,Cortex,1582400000.0,True
+2025-03,Identity,0.0,False
+2025-03,Observability,0.0,False
+2025-04,Strata,2137800000.0,True
+2025-04,Prisma Cloud,1323400000.0,True
+2025-04,Cortex,1628800000.0,True
+2025-04,Identity,0.0,False
+2025-04,Observability,0.0,False
+2025-05,Strata,2185415437.75,True
+2025-05,Prisma Cloud,1353276509.27,True
+2025-05,Cortex,1665702547.57,True
+2025-05,Identity,0.0,False
+2025-05,Observability,0.0,False
+2025-06,Strata,2244900000.0,True
+2025-06,Prisma Cloud,1389700000.0,True
+2025-06,Cortex,1710400000.0,True
+2025-06,Identity,0.0,False
+2025-06,Observability,0.0,False
+2025-07,Strata,2352000000.0,True
+2025-07,Prisma Cloud,1456000000.0,True
+2025-07,Cortex,1792000000.0,True
+2025-07,Identity,0.0,False
+2025-07,Observability,0.0,False
+2025-08,Strata,2276815983.87,True
+2025-08,Prisma Cloud,1539092235.75,True
+2025-08,Cortex,1880458983.43,True
+2025-08,Identity,0.0,False
+2025-08,Observability,0.0,False
+2025-09,Strata,2310000000.0,True
+2025-09,Prisma Cloud,1559250000.0,True
+2025-09,Cortex,1905750000.0,True
+2025-09,Identity,0.0,False
+2025-09,Observability,0.0,False
+2025-10,Strata,2380000000.0,True
+2025-10,Prisma Cloud,1606500000.0,True
+2025-10,Cortex,1963500000.0,True
+2025-10,Identity,0.0,False
+2025-10,Observability,0.0,False
+2025-11,Strata,2410468819.06,True
+2025-11,Prisma Cloud,1627676228.22,True
+2025-11,Cortex,1989951785.57,True
+2025-11,Identity,0.0,False
+2025-11,Observability,0.0,False
+2025-12,Strata,2450000000.0,True
+2025-12,Prisma Cloud,1653750000.0,True
+2025-12,Cortex,2021250000.0,True
+2025-12,Identity,0.0,False
+2025-12,Observability,0.0,False
+2026-01,Strata,2520000000.0,True
+2026-01,Prisma Cloud,1701000000.0,True
+2026-01,Cortex,2079000000.0,True
+2026-01,Identity,0.0,False
+2026-01,Observability,175000000.0,False
+2026-02,Strata,2541556394.25,True
+2026-02,Prisma Cloud,1715740466.49,True
+2026-02,Cortex,2097119112.73,True
+2026-02,Identity,1400000000.0,False
+2026-02,Observability,185500000.0,False
+2026-03,Strata,2570000000.0,True
+2026-03,Prisma Cloud,1734750000.0,True
+2026-03,Cortex,2120250000.0,True
+2026-03,Identity,1435000000.0,False
+2026-03,Observability,196630000.0,False
+2026-04,Strata,2620000000.0,True
+2026-04,Prisma Cloud,1768500000.0,True
+2026-04,Cortex,2161500000.0,True
+2026-04,Identity,1470875000.0,False
+2026-04,Observability,208427800.0,False
+2026-05,Strata,2652119010.22,True
+2026-05,Prisma Cloud,1790100000.0,True
+2026-05,Cortex,2187900000.0,True
+2026-05,Identity,1536186474.21,False
+2026-05,Observability,220933468.0,False
+2026-06,Strata,2700000000.0,True
+2026-06,Prisma Cloud,1822500000.0,True
+2026-06,Cortex,2227500000.0,True
+2026-06,Identity,1545338046.87,False
+2026-06,Observability,234189476.08,False
+2026-07,Strata,2780000000.0,True
+2026-07,Prisma Cloud,1876500000.0,True
+2026-07,Cortex,2293500000.0,True
+2026-07,Identity,1583971498.05,False
+2026-07,Observability,248240844.64,False

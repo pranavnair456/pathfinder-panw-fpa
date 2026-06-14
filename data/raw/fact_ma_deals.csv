@@ -1,0 +1,4 @@
+deal_name,platform,deal_value_usd,cash_pct,equity_pct,target_arr_usd,target_arr_growth,close_date,integration_ramp_months,cost_synergy_pct,revenue_synergy_pct,is_hypothetical
+CyberArk,Identity,25000000000,0.4,0.6,1400000000,0.3,2026-02-11,24,0.08,0.12,False
+Chronosphere,Observability,3350000000,0.85,0.15,175000000,1.0,2026-01-15,18,0.06,0.2,False
+Hypothetical Tuck-In (NHI Security),Identity,2000000000,0.6,0.4,120000000,0.7,2027-02-01,18,0.07,0.18,True
